@@ -197,7 +197,21 @@ END;
 
 
 
+------------------------------Delete Procedure--------------------------------
 
+
+CREATE OR REPLACE procedure supprimer_Customer(Customer_id Customer.CustomerID%type)
+is
+begin
+    Delete FROM Customer WHERE CustomerID = Customer_id;
+end;
+/
+
+BEGIN
+
+supprimer_Customer(4);
+END;
+/
 
 
 
